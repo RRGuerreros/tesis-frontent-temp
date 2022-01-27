@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>Historia clínica</mat-card-title>
+    <mat-card-subtitle>Formulario historia clínica</mat-card-subtitle>
+    <mat-dialog-content class="mat-typography">
+
+        <input style="background-color: red;" type="hidden" [attr.data-historiaclinicaid]="historiaClinicaId" id="historiaClinicaId">
+        
+        <mat-tab-group [color]="'accent'" [backgroundColor]="'primary'">
+
+            <mat-tab label="DATOS GENERALES" > 
+
+                <app-datos-generales [pacienteId]="pacienteId"></app-datos-generales>
+
+            </mat-tab>
+            <mat-tab label="ANTECEDENTES"> 
+
+                <app-hc-antecedentes></app-hc-antecedentes>
+
+            </mat-tab>
+            <mat-tab label="MOTIVO DE CONSULTA">
+
+                <app-hc-listar-motivo-consulta></app-hc-listar-motivo-consulta>
+
+            </mat-tab>
+            <mat-tab label="MEDICACIÓN"> 
+
+                <app-hc-listar-medicacion></app-hc-listar-medicacion>
+
+            </mat-tab>
+        </mat-tab-group>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <div class="w-100">
+            
+        </div>
+    </mat-dialog-actions>
+</mat-card>
